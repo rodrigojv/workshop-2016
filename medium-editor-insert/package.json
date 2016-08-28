@@ -1,0 +1,22 @@
+{
+  "name": "medium-editor-insert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && webpack-dev-server",
+    "build": "node_modules/.bin/webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "medium-editor-insert-plugin": "^2.4.0"
+  },
+  "devDependencies": {
+    "imports-loader": "^0.6.5",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  }
+}
