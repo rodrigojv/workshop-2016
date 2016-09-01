@@ -7,9 +7,16 @@ Usamos browserify para correr los tests en un navegador.
 
 ## Inicio rápido
 
-```$ npm install```
+`$ npm install`
 
-```$ npm test```
+`$ npm run start`
+
+Luego acceder a http://localhost:8080 si se quiere jugar con la aplicación :-).
+
+
+Para correr los tests ejecutar:
+
+`$ npm test`
 
 ## Tecnologías necesarias para test de código JavaScript
 
@@ -19,9 +26,9 @@ Para hacer test de código JavaScript se necesitan tres cosas:
 2. Un medio para escribir aserciones
 3. Opcionalmente un medio para correr los tests en un browser 
 
-Para 1. y 2. se tiene como alternativa Jasmine. 
+Para 1. y 2. se tiene como alternativa [Jasmine](http://jasmine.github.io/2.0/introduction.html). 
 
-Para 1. tenemos otra alternativa popular que es Mocha, que a diferencia de Jasmine no viene con una librería para aserciones y por eso usaremos la también popular librería Chai.
+Para 1. tenemos otra alternativa popular que es [Mocha](https://mochajs.org/), que a diferencia de Jasmine no viene con una librería para aserciones y por eso usaremos la también popular librería [Chai](http://chaijs.com/).
 
 Con Mocha y Chai estamos hechos para correr tests unitarios pero para hacer algo más de integración necesitamos una herramienta como Karma, que es un framework que corre nuestros tests Mocha/Chai en un navegador.
 
@@ -88,7 +95,7 @@ describe("Tests para el Login", function(){
 
     // Descripción de la funcionalidad específica que se testea.
     it('Debe mostrar error al dejar vacio el password', function(){
-
+    
     });
 
 });
@@ -100,7 +107,7 @@ Se configura con un archivo `karma.config.js`.
 Las partes más relevantes de este archivo son.
 
 1) Le decimos a mocha cuáles son los Frameworks JS que usaremos para escribir los tests.
-_Sinon-chai_ se usa para inspeccionar llamadas a funciones. Y browserify para crear el bundle que se cargará al browser para test.
+_sinon-chai_ se usa para inspeccionar llamadas a funciones. Y browserify para crear el bundle que se cargará al browser para test.
 
 ```
     // frameworks to use
@@ -130,7 +137,6 @@ _Sinon-chai_ se usa para inspeccionar llamadas a funciones. Y browserify para cr
 	    'js/**/*.test.js': ['browserify'] 
     },
 ```
-
 
 ## Solución de problemas
 
