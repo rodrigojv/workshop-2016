@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && webpack-dev-server",
+    "start": "webpack-dev-server --content-base build/",
     "build": "node_modules/.bin/webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "medium-editor-insert-plugin": "^2.4.0"
+    "css-loader": "^0.24.0",
+    "medium-editor-insert-plugin": "^2.4.0",
+    "style-loader": "^0.13.1"
   },
   "devDependencies": {
     "imports-loader": "^0.6.5",

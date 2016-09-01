@@ -1,3 +1,8 @@
+    
+require('medium-editor/dist/css/medium-editor.min.css');
+require('medium-editor/dist/css/themes/default.css');
+require('medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css');
+ 
 var MediumEditor = require('medium-editor');
 var $ = require('jquery');
 require('medium-editor-insert-plugin')($);

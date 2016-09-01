@@ -4,7 +4,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
       filename: 'bundle.js',
-      path: resolve(__dirname , 'dist')
+      path: resolve(__dirname , 'build'),
+	  publicPath: '/assets/'
   },
   module: {
     loaders: [
@@ -15,7 +16,11 @@ module.exports = {
       {
         test: require.resolve("medium-editor-insert-plugin"),
         loader: "imports?define=>false"
-      }
+      },
+	  {
+		test: /\.css$/,
+		loaders: ['style', 'css']
+	  }
     ]
   }
 };
